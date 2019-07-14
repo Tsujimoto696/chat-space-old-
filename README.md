@@ -1,7 +1,7 @@
 # Chat-Space DB設計
 
 ## Usersテーブル
-|id|Name|E-mail|Options|coments_id|member_id|group_id|
+|id|Name|E-mail|Options|Coments_id|Member_id|Group_id|
 |--|----|------|-------|----------|---------|--------|
 |integer|string|string|null: false, foreign_key: true|
 |integer|string|string|null: false, foreign_key: true|
@@ -15,7 +15,7 @@
 
 
 ## commentsテーブル
-|id|Column|Options|user_id|member_id|group_id|
+|id|Column|Options|User_id|Member_id|Group_id|
 |--|------|-------|-------|---------|--------|
 |integer|text|null: false, foreign_key: true|
 |integer|text|null: false, foreign_key: true|
@@ -26,7 +26,7 @@
 
 
 ## groupsテーブル
-|id|Options|user_id|comemnts_id|member_id|
+|id|Options|User_id|Comemnts_id|Member_id|
 |--|-------|-------|-----------|---------|
 |integer|null: false, foreign_key: true|
 |integer|text|null: false, foreign_key: true|
@@ -37,7 +37,7 @@
 
 
 ## memberテーブル
-|id|Options|comments-id|user_id|group_id|
+|id|Options|Comments-id|User_id|Group_id|
 |--|-------|-----------|-------|--------|
 |integer|text|null: false, foreign_key: true|
 |integer|text|null: false, foreign_key: true|
