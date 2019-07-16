@@ -9,11 +9,12 @@
 
 
 ### Association
-- belongs_to :coments
-- belongs_to :group
-- belongs_to :member
+class Users  << ApplicationRecord
+  has_many    : coments  : group
+  has_many    : member
+end
 
-
+                   
 ## commentsテーブル
 |id|Column|Options|User_id|Member_id|Group_id|
 |--|------|-------|-------|---------|--------|
@@ -22,7 +23,9 @@
 |integer|text|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
+class Users  << ApplicationRecord
+  belongs_to :user
+end
 
 
 ## groupsテーブル
@@ -32,16 +35,20 @@
 |integer|text|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :member
-- belongs_to :user
-
+class groups  << ApplicationRecord 
+  belongs_to :member
+  belongs_to :users
+end
 
 ## memberテーブル
 |id|Options|Comments-id|User_id|Group_id|
 |--|-------|-----------|-------|--------|
-|integer|text|null: false, foreign_key: true|
-|integer|text|null: false, foreign_key: true|
+|integer|null: false, foreign_key: true|
+|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-- belongs_to :group
+class member  << ApplicationRecord
+  belongs_to :user
+  belongs_to :group
+  belongs_to  :comments
+end
