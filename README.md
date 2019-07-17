@@ -10,8 +10,9 @@
 
 ### Association
 class Users  << ApplicationRecord
-  has_many    : coments  : group
-  has_many    : member
+  belongs_to  :coment
+  belongs_to  :group
+  belongs_to  :member
 end
 
                    
@@ -23,7 +24,7 @@ end
 |integer|text|null: false, foreign_key: true|
 
 ### Association
-class Users  << ApplicationRecord
+class Comments  << ApplicationRecord
   belongs_to :user
 end
 
@@ -36,8 +37,9 @@ end
 
 ### Association
 class groups  << ApplicationRecord 
-  belongs_to :member
-  belongs_to :users
+  has_many :members
+  has_many :users
+  has_many :comments
 end
 
 ## memberテーブル
@@ -48,7 +50,7 @@ end
 
 ### Association
 class member  << ApplicationRecord
-  belongs_to :user
+  has_many :users
   belongs_to :group
-  belongs_to  :comments
+  has_many  :comments
 end
