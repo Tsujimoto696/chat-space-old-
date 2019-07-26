@@ -72,3 +72,6 @@ end
 
 #Hamlファイルに他ファイルを一括変換
 gem 'haml-rails'
+
+#gem font-awesomeを取得
+gem "font-awesome-rails"
