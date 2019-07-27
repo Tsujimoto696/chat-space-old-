@@ -15,8 +15,8 @@
             メンバー2
           %li.member
             メンバー3
-      .right-header
-        .right-header__button
+      .main-header
+        .main-header__button
           Edit
     .messages
       .message
@@ -45,10 +45,10 @@
             2019/07/24
         .lower-meesage
           .lower-message__content
-            時間かかってしまった・・・(・・;)
+            時間がかかってしまった・・・(・・;)
     .form
       %form
-        %input.form__message
+        %input.form__message{type: 'text', placeholder: 'type a message'}
         .form__mask
           %label.form__mask__image
             = fa_icon 'picture-o', class: 'icon'
