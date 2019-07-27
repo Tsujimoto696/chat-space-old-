@@ -3,7 +3,7 @@
 ## Usersテーブル
 |id|Column|type|Options|group_id|comments|member_id|
 |--|------|----|-------|--------|--------|---------|
-|integer|name|string|null: false, foreign_key: true|integer|integer|
+|integer|name|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
  - has_many :comments
@@ -36,7 +36,7 @@
 ## Membersテーブル
 |id|column|type|Options|user_id|comment_id|group_id|
 |--|------|----|-------|-------|----------|--------|
-|integer|text|string|null: false, foreign_key: true|integer|integer|
+|integer|text|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
  - has_many :users
