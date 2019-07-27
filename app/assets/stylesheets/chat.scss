@@ -22,7 +22,7 @@
         }
       }
     }
-    .right-header {
+    .main-header {
       border: 1px solid $light_blue;
       color: $light_blue;
       float: right;
@@ -72,7 +72,8 @@
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100% - 160px);
+      padding: 0 0 0 10px;
     }
     &__mask {
       background-color: $white;
