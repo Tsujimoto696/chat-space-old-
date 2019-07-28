@@ -70,8 +70,15 @@ group :production do
      gem 'unicorn'
 end
 
-#Hamlファイルに他ファイルを一括変換
+
+#hamlを使うためのgem
 gem 'haml-rails'
+
+#erbファイルをHamlファイルに一括変換
+gem 'erb2haml'
 
 #gem font-awesomeを取得
 gem "font-awesome-rails"
+
+# ログイン周りのページを作成するためのdeviseインストール
+gem 'devise'
