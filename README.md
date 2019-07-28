@@ -32,7 +32,7 @@
 
 
 ## Membersテーブル
-|id|column|type|Options|user_id|comment_id|group_id|
+|id|Column|type|Options|user_id|comment_id|group_id|
 |--|------|----|-------|-------|----------|--------|
 |integer|text|string|null: false, foreign_key: true|integer|integer|integer|
 
