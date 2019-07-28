@@ -23,7 +23,7 @@
 ## Groupsテーブル
 |id|Column|type|Options|user_id|member_id|comments_id|
 |--|------|----|-------|-------|---------|-----------|
-|integer|Group_name|string|null: false, foreign_key: true|integer|integer|
+|integer|Group_name|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
  - has_many :users, through: members
