@@ -1,8 +1,8 @@
 # Chat-Space DB設計
 
 ## Usersテーブル
-|id|Column|type|Options|group_id|comments|member_id|
-|--|------|----|-------|--------|--------|---------|
+|id|Column|type|Options|comments|member_id|group_id|
+|--|------|----|-------|--------|---------|--------|
 |integer|name|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
@@ -18,11 +18,13 @@
 
 ### Association
  - belongs_to :user
+ - belongs_to :group
+ - belongs_to :member
 
 
 ## Groupsテーブル
-|id|Column|type|Options|user_id|member_id|comments_id|
-|--|------|----|-------|-------|---------|-----------|
+|id|Column|type|Options|user_id|comments_id|member_id|
+|--|------|----|-------|-------|-----------|---------|
 |integer|Group_name|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
@@ -34,7 +36,7 @@
 ## Membersテーブル
 |id|Column|type|Options|user_id|comment_id|group_id|
 |--|------|----|-------|-------|----------|--------|
-|integer|text|string|null: false, foreign_key: true|integer|integer|integer|
+|integer|string|null: false, foreign_key: true|integer|integer|integer|
 
 ### Association
  - has_many :users
