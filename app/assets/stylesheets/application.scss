@@ -1,5 +1,4 @@
 @import "./reset";
-@import "config/colors";
 @import "config/font-size";
 @import "mixins/mixin";
 @import "mixins/vendor_prefix";
@@ -7,3 +6,6 @@
 @import "modules/chat";
 @import "messages/messages.scss";
 @import "font-awesome";
+// colors.scssとflash.scssをインポート
+@import "config/colors";
+@import "modules/flash";
